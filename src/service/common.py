@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends
 from src.handlers.common import CommonHandler
 from src.utils.security_utils.decorators import CookieAuthentication
 
-app = APIRouter(tags=["Common"], prefix="/api")
+app = APIRouter(tags=["Common"], prefix="/be/api")
 
 auth = CookieAuthentication()
 handler = CommonHandler()
