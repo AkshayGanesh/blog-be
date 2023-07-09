@@ -9,7 +9,7 @@ from src.utils.security_utils.decorators import CookieAuthentication
 
 auth = CookieAuthentication()
 
-app = APIRouter(tags=["Articles"], prefix="/api")
+app = APIRouter(tags=["Articles"], prefix="/be/api")
 handler = ArticleHandler()
 
 @app.post("/articles/create")
