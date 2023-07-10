@@ -11,6 +11,8 @@ class Configurations(BaseSettings):
     encryption_key: str
     refresh_token_duration: int
 
+    api_prefix: str
+
     class Config:
         """Config."""
 
