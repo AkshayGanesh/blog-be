@@ -5,6 +5,7 @@ from src.service.article import app as article
 from src.service.user import app as user
 from src.service.common import app as common
 from src.common.logsetup import configure_logger
+from src.common.settings import config
 
 app = FastAPI()
 
@@ -17,9 +18,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(article)
-app.include_router(user)
-app.include_router(common)
+app.include_router(
+    article,
+    prefix="/api",
+)
+app.include_router(
+    user,
+    prefix="/api",
+)
+app.include_router(
+    common,
+    prefix="/api",
+)
 
 
 @app.on_event("startup")

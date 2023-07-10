@@ -7,7 +7,7 @@ from src.handlers.user import UserHandler
 from src.schemas import user as user_schema
 
 
-app = APIRouter(tags=["User"], prefix="/be/api")
+app = APIRouter(tags=["User"])
 handler = UserHandler()
 
 
